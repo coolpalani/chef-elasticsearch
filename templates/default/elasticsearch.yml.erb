@@ -329,8 +329,8 @@ http.port: <%= node['elasticsearch']['server']['http_port'] %>
 #
 # 1. Disable multicast discovery (enabled by default):
 #
-# discovery.zen.ping.multicast.enabled: false
-#
+discovery.zen.ping.multicast.enabled: <%= node['elasticsearch']['discovery']['multicast'] %>
+
 # 2. Configure an initial list of master nodes in the cluster
 #    to perform discovery when new nodes (master or data) are started:
 #

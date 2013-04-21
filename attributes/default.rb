@@ -33,3 +33,7 @@ default['elasticsearch']['thread_stack_size']  = '256k'
 default['elasticsearch']['node_name']      = node.name
 default['elasticsearch']['cluster_name']   = 'elasticsearch'
 
+
+# === SETTINGS ===
+#
+default['elasticsearch']['discovery']['multicast'] = true
