@@ -1,5 +1,5 @@
-version = '0.19.8'
-default['elasticsearch']['package_url']  = "https://github.com/downloads/elasticsearch/elasticsearch/elasticsearch-#{version}.tar.gz"
+version = '0.20.6'
+default['elasticsearch']['package_url']  = "https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-#{version}.tar.gz"
 default['elasticsearch']['extra_libraries'] = Mash.new
 
 default['elasticsearch']['user']      = 'elasticsearch'
