@@ -131,6 +131,11 @@ template '/etc/init/elasticsearch.conf' do
   notifies :restart, 'service[elasticsearch]', :delayed
 end
 
+user_ulimit node['elasticsearch']['user'] do
+  filehandle_limit 32000
+  memory_limit 'unlimited'
+end
+
 service 'elasticsearch' do
   provider Chef::Provider::Service::Upstart
   supports :status => true, :restart => true
